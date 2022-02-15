@@ -11,3 +11,17 @@ export TERM=xterm-256color
 {{SUDOERS}}
 
 cd /etc/sudoers.d/
+
+{{MYSQL commands}}
+
+mysql -u user -p -h [ip]: remote
+mysql -u user -p : local
+
+show databases;
+use databasename;
+
+show tables;
+select * from tablename;
+
+describe tablename;
+
