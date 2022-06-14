@@ -14,7 +14,7 @@ At this point, it will probably tell you something about sources in multiple pla
 No matter how many times you try to delete or change the contents of cydia.list, it will always reappear or revert back. 
 It is a symbolic link to /var/mobile/Library/Caches/com.saurik.Cydia/sources.list. Changing this or deleting it also, of course, 
 leads it to coming back any time you restart or refresh the app. Any changes you try to make to this - either adding or removing repos - 
-will ultimately do nothing.
+will ultimately do nothing. Also, removing the simlink with "unlink cydia.list" fails, and will return once again when you reopen the app.
 
 However, if we just delete the directory sources.list.d, we get around this completely (this is reversible, too. By making another directory 
 wth the same name and refreshing Cydia, the original cydia.list will come back). Running apt update or refreshing in the app we see it is now
