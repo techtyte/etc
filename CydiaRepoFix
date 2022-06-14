@@ -1,14 +1,27 @@
 ///Fixing broken repos in Cydia\\\
 \\\Creating your own source.list///
 
-I couldn't find any help trying to figure out how to edit repos from the command line in a way that actually worked, and didn't revert back every time I refreshed or restarted my Cydia app. After a couple hours I finally figured out a way you can do just that:
+I couldn't find any help trying to figure out how to edit repos from the command line in a way that actually worked, 
+and didn't revert back every time I refreshed or restarted my Cydia app. After a couple hours I finally figured out a way you can do just that:
 
 ssh into your iPhone (ssh root@phone IP - default password is alpine) - You can download OpenSSH from Cydia.
 
-First, apt edit-sources, put in your sources and the ones you'd like to keep from /etc/apt/sources.list.d/cydia.list (all the default ones I would definitely copy). The format for each line should look like "deb https://repo.com ./" This will save as sources.list in /apt/. If we refresh cydia or run apt update, we will see it does pull from this list. At this point, it will probably tell you something about sources in multiple places which proves my point.
+First, apt edit-sources, put in your sources and the ones you'd like to keep from /etc/apt/sources.list.d/cydia.list 
+(all the default ones I would definitely copy). The format for each line should look like "deb https://repo.com ./" 
+This will save as sources.list in /apt/. If we refresh cydia or run apt update, we will see it does pull from this list. 
+At this point, it will probably tell you something about sources in multiple places which proves my point.
 
-No matter how many times you try to delete or change the contents of cydia.list, it will always reappear or revert back. It is a symbolic link to /var/mobile/Library/Caches/com.saurik.Cydia/sources.list. Changing this or deleting it also, of course, leads it to coming back any time you restart or refresh the app. Any changes you try to make to this - either adding or removing repos - will ultimately do nothing.
+No matter how many times you try to delete or change the contents of cydia.list, it will always reappear or revert back. 
+It is a symbolic link to /var/mobile/Library/Caches/com.saurik.Cydia/sources.list. Changing this or deleting it also, of course, 
+leads it to coming back any time you restart or refresh the app. Any changes you try to make to this - either adding or removing repos - 
+will ultimately do nothing.
 
-However, if we just delete the directory sources.list.d, we get around this completely. Running apt update or refreshing in the app we see it is now only pulling from our sources.list we created earlier. 
+However, if we just delete the directory sources.list.d, we get around this completely (this is reversible, too. By making another directory 
+wth the same name and refreshing Cydia, the original cydia.list will come back). Running apt update or refreshing in the app we see it is now
+only pulling from our sources.list we created earlier. 
 
-The only drawback is now you an only add and remove repos from the command line. Which isn't bad imo, you can add many at a time manually or delete many at once. You could even roll with both lists, leaving the sources.list.d directory in tact and still making a new sources.list to add/delete en masse. The only reason I tried to find this work-around was because I had some really broken repos that would not go away and it made me mad lol. 
+The only drawback is now you an only add and remove repos from the command line. 
+Which isn't bad imo, you can add many at a time manually or delete many at once. 
+You could even roll with both lists, leaving the sources.list.d directory in tact and still making a new sources.list to add/delete en masse. 
+The only reason I tried to find this work-around was because I had some really broken repos that would not go away and it made me mad lol. 
+
