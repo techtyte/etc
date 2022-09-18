@@ -25,3 +25,12 @@ select * from tablename;
 
 describe tablename;
 
+
+
+Filter wordlist for specific lengths example:
+
+sudo grep -x '.\{4\}' rockyou.txt > 4rockyou.txt
+
+
+Download all files in index of pages:
+wget -r -np -nH --cut-dirs=3 -R index.html http://website.com/path/to/files
