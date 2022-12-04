@@ -1,0 +1,66 @@
+###ChatGPT generates code to choose three tarot cards in a spread
+
+# Import the necessary libraries
+import random
+
+# Define a list of tarot cards
+tarot_cards = [
+    "The Fool",
+    "The Magician",
+    "The High Priestess",
+    "The Empress",
+    "The Emperor",
+    "The Hierophant",
+    "The Lovers",
+    "The Chariot",
+    "Strength",
+    "The Hermit",
+    "The Wheel of Fortune",
+    "Justice",
+    "The Hanged Man",
+    "Death",
+    "Temperance",
+    "The Devil",
+    "The Tower",
+    "The Star",
+    "The Moon",
+    "The Sun",
+    "Judgement",
+    "The World"
+]
+
+# Define a dictionary of tarot card meanings
+tarot_meanings = {
+    "The Fool": "A new beginning, innocence, trust in the universe",
+    "The Magician": "Power, skill, creativity",
+    "The High Priestess": "Intuition, mystery, the unconscious",
+    "The Empress": "Fertility, abundance, creativity",
+    "The Emperor": "Authority, stability, structure",
+    "The Hierophant": "Tradition, morality, spirituality",
+    "The Lovers": "Love, choices, relationships",
+    "The Chariot": "Victory, determination, control",
+    "Strength": "Strength, courage, self-discipline",
+    "The Hermit": "Solitude, reflection, inner guidance",
+    "The Wheel of Fortune": "Change, cycles, destiny",
+    "Justice": "Justice, fairness, truth",
+    "The Hanged Man": "Surrender, sacrifice, letting go",
+    "Death": "Transformation, change, rebirth",
+    "Temperance": "Balance, harmony, moderation",
+    "The Devil": "Bondage, addiction, materialism",
+    "The Tower": "Disaster, upheaval, revelation",
+    "The Star": "Hope, inspiration, guidance",
+    "The Moon": "Illusion, fear, the unconscious",
+    "The Sun": "Success, happiness, fulfillment",
+    "Judgement": "Judgement, accountability, inner calling",
+    "The World": "Completion, accomplishment, integration"
+}
+
+# Choose three random tarot cards
+past_card = random.choice(tarot_cards)
+present_card = random.choice(tarot_cards)
+future_card = random.choice(tarot_cards)
+
+# Display the chosen tarot cards and their meanings
+print(f"The Past: {past_card} - {tarot_meanings[past_card]}")
+print(f"The Present: {present_card} - {tarot_meanings[present_card]}")
+print(f"The Future: {future_card} - {tarot_meanings[future_card]}")
