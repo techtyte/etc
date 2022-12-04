@@ -1,0 +1,46 @@
+##chatGPT generated code to randomly select a tarot card
+# Import the random module
+import random
+
+# Define a list of tarot card names
+tarot_cards = ["The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor", "The Hierophant", "The Lovers", "The Chariot", "Strength", "The Hermit", "The Wheel of Fortune", "Justice", "The Hanged Man", "Death", "Temperance", "The Devil", "The Tower", "The Star", "The Moon", "The Sun", "Judgement", "The World"]
+
+# Define a dictionary that maps each tarot card to its meaning
+tarot_meanings = {
+    "The Fool": "The Fool represents new beginnings, a fresh start, and taking a leap of faith.",
+    "The Magician": "The Magician represents creativity, resourcefulness, and the power to manifest your desires.",
+    "The High Priestess": "The High Priestess represents intuition, inner wisdom, and the unconscious mind.",
+    "The Empress": "The Empress represents abundance, fertility, and nurturing.",
+    "The Emperor": "The Emperor represents authority, structure, and leadership.",
+    "The Hierophant": "The Hierophant represents tradition, religious beliefs, and conformity.",
+    "The Lovers": "The Lovers represent choices, love, and relationships.",
+    "The Chariot": "The Chariot represents determination, ambition, and victory.",
+    "Strength": "Strength represents inner strength, courage, and self-discipline.",
+    "The Hermit": "The Hermit represents introspection, solitude, and contemplation.",
+    "The Wheel of Fortune": "The Wheel of Fortune represents cycles of change, good luck, and unexpected opportunities.",
+    "Justice": "Justice represents fairness, truth, and balance.",
+    "The Hanged Man": "The Hanged Man represents sacrifice, surrender, and letting go.",
+    "Death": "Death represents transformation, change, and letting go of the old.",
+    "Temperance": "Temperance represents moderation, harmony, and balance.",
+    "The Devil": "The Devil represents temptation, addiction, and the shadow self.",
+    "The Tower": "The Tower represents upheaval, chaos, and sudden change.",
+    "The Star": "The Star represents hope, inspiration, and aspiration.",
+    "The Moon": "The Moon represents fear, anxiety, and the unknown.",
+    "The Sun": "The Sun represents joy, success, and radiance.",
+    "Judgement": "Judgement represents accountability, judgement, and inner calling.",
+    "The World": "The World represents completion, accomplishment, and integration."
+}
+
+# Use the random module to pick a random index from the list of tarot card names
+random_index = random.randint(0, len(tarot_cards) - 1)
+
+# Get the tarot card name at the random index
+tarot_card = tarot_cards[random_index]
+
+# Use the tarot card name to look up the meaning in the dictionary
+tarot_meaning = tarot_meanings[tarot_card]
+
+# Print the tarot card and its meaning
+print("Your tarot card is: " + tarot_card)
+print("The meaning of your tarot card is: " + tarot_meaning)
+
