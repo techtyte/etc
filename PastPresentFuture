@@ -1,4 +1,4 @@
-###ChatGPT generates code to choose three tarot cards in a spread
+###ChatGPT generated code to choose three tarot cards in a spread
 
 # Import the necessary libraries
 import random
