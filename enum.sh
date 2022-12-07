@@ -1,4 +1,4 @@
-##I used ChatGPD to write a bash script to enumerate a Linux host!##
+##I used ChatGPT to write a bash script to enumerate a Linux host!##
 
 # Get the current user
 current_user=$(whoami)
