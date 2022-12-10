@@ -42,5 +42,5 @@ tarot_meaning = tarot_meanings[tarot_card]
 
 # Print the tarot card and its meaning
 print("Your tarot card is: " + tarot_card)
-print("The meaning of your tarot card is: " + tarot_meaning)
+print(tarot_meaning)
 
